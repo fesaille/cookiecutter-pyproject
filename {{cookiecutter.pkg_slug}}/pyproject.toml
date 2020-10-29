@@ -1,0 +1,67 @@
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "{{ cookiecutter.pkg_name }}"
+version = "{{ cookiecutter.version }}"
+description = "{{ cookiecutter.description }}"
+authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
+license = "{{ cookiecutter.license }}"
+readme = "README.md"
+keywords = []
+packages = [ { include = "{{ cookiecutter.pkg_slug }}" } ]
+include = [
+    "README.md",
+    "pyproject.toml"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.6"
+
+[tool.poetry.dev-dependencies]
+bandit = "*"
+black = "*"
+{% if cookiecutter["add_coverage"] == "y" %}
+coverage = "*"
+{% endif %}
+ipython = "*"
+isort = { version = "*", extras = ["pyproject"] }
+pylint = "*"
+pytest = "*"
+{% if cookiecutter["add_coverage"] == "y" %}
+pytest-cov = "*"
+{% endif %}
+safety = "*"
+
+{% if cookiecutter["init_git"] == "y" %}
+[tool.poetry.scripts]
+aze = "aze.python_package_import_name }}.cli:main"
+{% endif %}
+
+[tool.black]
+line-length = 120
+
+[tool.isort]
+line_length = 120
+not_skip = "__init__.py"
+multi_line_output = 3
+force_single_line = false
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+include_trailing_comma = true
+
+[tool.pylint.options]
+disable = """
+  bad-continuation,
+  too-many-lines,
+  too-many-public-methods,
+  too-many-locals,
+  too-many-statements,
+  too-many-arguments,
+  too-many-instance-attributes,
+  too-many-branches,
+  too-few-public-methods,
+  duplicate-code
+"""
+max-line-length = "120"
