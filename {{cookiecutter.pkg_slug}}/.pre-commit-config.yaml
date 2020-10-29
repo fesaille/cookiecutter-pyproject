@@ -4,6 +4,7 @@ repos:
     rev: v2.4.0
     hooks:
       - id: trailing-whitespace
+      - id: check-toml
       - id: end-of-file-fixer
       - id: check-added-large-files
   - repo: https://github.com/markdownlint/markdownlint

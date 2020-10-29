@@ -34,11 +34,6 @@ pytest-cov = "*"
 {% endif %}
 safety = "*"
 
-{% if cookiecutter["init_git"] == "y" %}
-[tool.poetry.scripts]
-aze = "aze.python_package_import_name }}.cli:main"
-{% endif %}
-
 [tool.black]
 line-length = 120
 
