@@ -24,3 +24,19 @@ pipx install pre-commit
 ```bash
 cookiecutter gh:fesaille/cookiecutter-pyproject
 ```
+
+## `pre-commit` hooks
+
+- Generic, md and yaml
+  - [markdownlint](https://github.com/markdownlint/markdownlint)
+  - [yamllint](https://github.com/adrienverge/yamllint)
+
+- Python related
+  - [autoflake](https://github.com/myint/autoflake) removes unused imports and
+    unused variables from Python code.  - [black](https://github.com/psf/black)
+    is a code formatter whose gain is to avoid noisy diffs.
+  - [isort](https://github.com/PyCQA/isort) sorts import.
+  - [pylint](https://github.com/PyCQA/pylint) is a static code analysis tool.
+  - [mypy](https://github.com/python/mypy) is a static type checker
+  - [bandit](https://github.com/PyCQA/bandit) is a tool designed to find common
+     security issues in Python code.
