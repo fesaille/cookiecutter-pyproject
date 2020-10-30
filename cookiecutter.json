@@ -7,6 +7,7 @@
     "email": "email",
     "company": "none",
     "add_coverage": "y",
+    "add_pytype": "y",
     "init_git": "y",
     "add_travis_config": "n",
     "add_gitlab_ci_config": "n",

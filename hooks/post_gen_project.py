@@ -4,9 +4,10 @@ from pathlib import Path
 
 
 # fix empty lines within a section of pyproject.toml
-pyproject  = Path('pyproject.toml')
-text = pyproject.read_text()
-pyproject.write_text(text.replace("\n\n", "\n").replace("\n[", "\n\n["))
+for f in ['pyproject.toml', '.pre-commit-config.yaml']:
+    p  = Path(f)
+    text = p.read_text()
+    p.write_text(text.replace("\n\n", "\n").replace("\n[", "\n\n["))
 
 # Init the repo as git directory
 if "{{ cookiecutter.init_git }}" == "y":

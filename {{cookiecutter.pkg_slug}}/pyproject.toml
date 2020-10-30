@@ -32,7 +32,11 @@ pytest = "*"
 {% if cookiecutter["add_coverage"] == "y" %}
 pytest-cov = "*"
 {% endif %}
+{% if cookiecutter["add_pytype"] == "y" %}
+pytype = "*"
+{% endif %}
 safety = "*"
+watermark = "*"
 
 [tool.black]
 line-length = 120
