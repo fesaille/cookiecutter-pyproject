@@ -1,37 +1,23 @@
-[build-system]
-requires = ["poetry_core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
-
 [tool.poetry]
-name = "{{ cookiecutter.pkg_name }}"
-version = "{{ cookiecutter.version }}"
-description = "{{ cookiecutter.description }}"
-authors = ["{{ cookiecutter.author }} <{{ cookiecutter.email }}>"]
-license = "{{ cookiecutter.license }}"
+name = "Cookiecutter pyproject"
+version = "0.1.0"
+description = "A simple template for pyproject.toml"
+authors = ["Emmanuel Roux"]
+license = "BSD-3"
 readme = "README.md"
 keywords = []
-packages = [ { include = "{{ cookiecutter.pkg_slug }}" } ]
-include = [
-    "README.md",
-    "pyproject.toml"
-]
 
 [tool.poetry.dependencies]
 python = ">=3.6.1,<4.0"
+cookiecutter = "^1.7.2"
+pre-commit = "^2.8.1"
 
 [tool.poetry.dev-dependencies]
 bandit = "*"
 black = "*"
-{% if cookiecutter["add_coverage"] == "y" %}
-coverage = "*"
-{% endif %}
-ipython = "*"
 isort = { version = "*", extras = ["pyproject"] }
 pylint = "*"
 pytest = "*"
-{% if cookiecutter["add_coverage"] == "y" %}
-pytest-cov = "*"
-{% endif %}
 python-language-server = "*"
 safety = "*"
 watermark = "*"
