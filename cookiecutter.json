@@ -1,6 +1,6 @@
 {
     "pkg_name": "Pkg name",
-    "pkg_slug": "{{ cookiecutter.pkg_name.lower().replace(' ', '_').replace('-', '_') }}",
+    "pkg_slug": "{{ cookiecutter.pkg_name.lower() | slugify(separator='_') }}",
     "version": "0.1.0",
     "description": "Pkg description",
     "author": "Emmanuel Roux",
