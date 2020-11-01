@@ -1,7 +1,7 @@
 # Cookiecutter pyproject
 
-This cookiecutter provides a basis configuration for python developement based
-on [`pyproject.toml` within a poetry](https://python-poetry.org/docs/pyproject)
+This cookiecutter provides a basis configuration for python development based
+on [`pyproject.toml` using a poetry](https://python-poetry.org/docs/pyproject)
 [build frontend](https://www.python.org/dev/peps/pep-0517/#terminology-and-goals)
 
 This is a **work on progress**.
