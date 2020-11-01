@@ -13,6 +13,7 @@ cookiecutter = "^1.7.2"
 pre-commit = "^2.8.1"
 
 [tool.poetry.dev-dependencies]
+autopep8 = "*"
 bandit = "*"
 black = "*"
 isort = { version = "*", extras = ["pyproject"] }
@@ -26,7 +27,6 @@ line-length = 120
 
 [tool.isort]
 line_length = 120
-not_skip = "__init__.py"
 multi_line_output = 3
 force_single_line = false
 balanced_wrapping = true
