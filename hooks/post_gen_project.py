@@ -2,10 +2,9 @@
 
 from pathlib import Path
 
-
 # fix empty lines within a section of pyproject.toml
-for f in ['pyproject.toml', '.pre-commit-config.yaml']:
-    p  = Path(f)
+for f in ["pyproject.toml", ".pre-commit-config.yaml"]:
+    p = Path(f)
     text = p.read_text()
     p.write_text(text.replace("\n\n", "\n").replace("\n[", "\n\n["))
 
@@ -19,8 +18,8 @@ if "{{ cookiecutter.init_git }}" == "y":
     # Install pre-commit
     pc(["install"])
 
-if "{{ cookiecutter.add_travis_config }}" == "n":
+if "{{ cookiecutter.ci_cd }}" != "travis_ci":
     Path(".travis.yml").unlink()
 
-if "{{ cookiecutter.add_gitlab_ci_config }}" == "n":
+if "{{ cookiecutter.ci_cd }}" != "gitlab_ci":
     Path(".gitlab-ci.yml").unlink()

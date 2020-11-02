@@ -23,10 +23,10 @@ safety = "*"
 watermark = "*"
 
 [tool.black]
-line-length = 120
+line-length = 80
 
 [tool.isort]
-line_length = 120
+line_length = 80
 multi_line_output = 3
 force_single_line = false
 balanced_wrapping = true
