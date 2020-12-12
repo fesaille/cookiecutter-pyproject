@@ -1,7 +1,7 @@
 ---
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v2.4.0
+    rev: v3.3.0
     hooks:
       - id: trailing-whitespace
       - id: end-of-file-fixer
@@ -40,3 +40,9 @@ repos:
         language: system
         files: 'tests/.*'
         types: [python]
+  - repo: https://github.com/talos-systems/conform
+    rev:  v0.1.0-alpha.20
+    hooks:
+      - id: conform
+        stages:
+          - commit-msg

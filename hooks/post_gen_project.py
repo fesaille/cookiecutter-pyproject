@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 from pathlib import Path
 
 # fix empty lines within a section of pyproject.toml

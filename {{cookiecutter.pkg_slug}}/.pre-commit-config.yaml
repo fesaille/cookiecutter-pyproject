@@ -54,3 +54,9 @@ repos:
     rev: 1.6.2
     hooks:
       - id: bandit
+  - repo: https://github.com/talos-systems/conform
+    rev: master
+    hooks:
+      - id: conform
+        stages:
+          - commit-msg
